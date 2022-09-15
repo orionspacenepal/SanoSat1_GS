@@ -16,14 +16,14 @@ void setup()
   
   if (!minimorse_init())
   {
-    Serial.println("RFM error!");
+    Serial.println("Radio error!");
     while (1)
     {
     }
   }
   else
   {
-    Serial.println("\nRFM success!\n");
+    Serial.println("\nMorse radio is ready!\n");
   }  
 }
 

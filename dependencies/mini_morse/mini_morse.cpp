@@ -126,6 +126,7 @@ uint8_t minimorse_init(void)
 
 void minimorse_transmit_msg(const String msg)
 {
+  radio.setModeTx();
   MorseMapStruct temp_morse_map{};
   for (uint8_t i = 0; i < msg.length(); i++)
   {
@@ -139,6 +140,7 @@ void minimorse_transmit_msg(const String msg)
       }
     }
   }
+  radio.setModeRx();
 }
 
 

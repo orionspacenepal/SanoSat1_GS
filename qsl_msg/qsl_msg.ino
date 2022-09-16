@@ -7,7 +7,7 @@
 
 #include "mini_morse.h"
 
-const String msg = "Thank you!";
+const String msg = "Thank you.";
 const uint16_t msg_delay = 5000; // millis
 
 void setup()

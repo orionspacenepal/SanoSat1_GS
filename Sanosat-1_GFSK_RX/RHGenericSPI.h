@@ -7,7 +7,7 @@
 #ifndef RHGenericSPI_h
 #define RHGenericSPI_h
 
-#include <RadioHead.h>
+#include "RadioHead.h"
 
 // #if (RH_PLATFORM == RH_PLATFORM_ARDUINO)
 #include <SPI.h> // for SPI_HAS_TRANSACTION and SPISettings

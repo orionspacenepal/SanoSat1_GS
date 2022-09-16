@@ -1,7 +1,7 @@
 
 #include <SPI.h>
 #include <Wire.h>
-#include <RH_RF24.h>
+#include "RH_RF24.h"
 
 // Singleton instance of the radio driver
 RH_RF24 rf24(10,2,9);

@@ -21,8 +21,8 @@
 #ifndef RH_RF24_h
 #define RH_RF24_h
 
-#include <RHGenericSPI.h>
-#include <RHSPIDriver.h>
+#include "RHGenericSPI.h"
+#include "RHSPIDriver.h"
 
 // This is the maximum number of interrupts the driver can support
 // Most Arduinos can handle 2, Megas can handle more

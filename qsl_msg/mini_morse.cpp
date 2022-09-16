@@ -124,6 +124,11 @@ uint8_t minimorse_init(void)
   return radio_status;
 }
 
+void minimorse_deinit(void)
+{
+  digitalWrite(MINI_MORSE_OUTPUT_PIN, LOW);
+}
+
 void minimorse_transmit_msg(const String msg)
 {
   radio.setModeTx();

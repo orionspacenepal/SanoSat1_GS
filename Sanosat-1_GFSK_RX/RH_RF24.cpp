@@ -3,7 +3,7 @@
 // Copyright (C) 2011 Mike McCauley
 // $Id: RH_RF24.cpp,v 1.16 2016/04/04 01:40:12 mikem Exp $
 
-#include <RH_RF24.h>
+#include "RH_RF24.h"
 // Generated with Silicon Labs WDS software:
 #include "radio_config_Si4460.h"
 

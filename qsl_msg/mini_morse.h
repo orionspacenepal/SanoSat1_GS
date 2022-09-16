@@ -5,6 +5,7 @@
 #include <Arduino.h>
 
 uint8_t minimorse_init(void);
+void minimorse_deinit(void);
 void minimorse_transmit_msg(const String msg);
 void minimorse_parse_byte(const uint8_t code);
 inline void minimorse_transmit_symbol(const char s);

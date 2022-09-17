@@ -10,17 +10,20 @@
 
 /* Start configuration */
 
+// Morse transmission configurations
+#define MINI_MORSE_RFM_TX_FREQUENCY 436.235
+#define MINI_MORSE_WPM 20
+
+// RFM pin configurations
 #define MINI_MORSE_PIN_RFM_SDN 9
 #define MINI_MORSE_PIN_RFM_SLAVE_SELECT 10
 #define MINI_MORSE_PIN_RFM_INTERRUPT 2
-#define MINI_MORSE_RFM_TX_FREQUENCY 436.235
 #define MINI_MORSE_OUTPUT_PIN 7
-
-#define MINI_MORSE_DIT_LEN 60 // 1200 / WPM
-#define MINI_MORSE_DAH_LEN (MINI_MORSE_DIT_LEN * 3)
 
 /* End configuration */
 
+#define MINI_MORSE_DIT_LEN (1200 / MINI_MORSE_WPM)
+#define MINI_MORSE_DAH_LEN (MINI_MORSE_DIT_LEN * 3)
 RH_RF24 radio(MINI_MORSE_PIN_RFM_SLAVE_SELECT, MINI_MORSE_PIN_RFM_INTERRUPT, MINI_MORSE_PIN_RFM_SDN);
 
 RH_RF24::ModemConfig OOKAsync = {
@@ -122,11 +125,6 @@ uint8_t minimorse_init(void)
   uint8_t radio_status = radio_init();
   
   return radio_status;
-}
-
-void minimorse_deinit(void)
-{
-  digitalWrite(MINI_MORSE_OUTPUT_PIN, LOW);
 }
 
 void minimorse_transmit_msg(const String msg)
